@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="icon" href="IMG/tab_black_24dp.svg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/RandomBg.css">
+    <link rel="stylesheet" href="CSS/board1.css">
+    <link rel="stylesheet" href="CSS/board2.css">
+    <link rel="stylesheet" href="CSS/clock.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/todo.css">
+    <link rel="stylesheet" href="CSS/weather.css">
+
+    <title>My Pad</title>
+</head>
+
+<body>
+    <!-- 배경이미지 -->
+    <div id="bg" class="bg">
+        <img src="">
+    </div>
+
+    <!-- 로그인 -->
+    <div id="login" class="login hidden">
+        <div class="loginBg"></div>
+        <form id="login-form" class="login-form">
+            <h1>Here <br>Make your own pad!</h1>
+            <input id="login-input" class="login-input" type="text" required maxlength="5"
+                placeholder="enter your pad name" autocomplete="off">
+            <input id="login-submit" class="login-submit" type="submit" value="Go">
+        </form>
+    </div>
+
+    <!-- 메인화면 -->
+    <div class="main">
+        <!-- 보드박스1 -->
+        <div class="boardBox">
+            <div class="boardBox_btn1">
+                <!--보드박스1 버튼-->
+                <img id="closebtn1" src="IMG/close_black_24dp.svg">
+            </div>
+            <div id="board1" class="board1">
+                <div class="box1">
+                    <!--노트이름-->
+                    <div id="login-info" class="login-info">
+                        <h4 id="greeting" class="greeting"></h4>
+                    </div>
+                    <!-- 브라우저 -->
+                    <ul id="browserbox" class="browerbox">
+                        <li id="google" class="google">
+                            <a href="https://www.google.com/" target="_blank"></a>
+                        </li>
+                        <li id="naver" class="naver">
+                            <a href="https://www.naver.com/" target="_blank"></a></li>
+                        <li id="youtube" class="youtube">
+                            <a href="https://www.youtube.com/" target="_blank"></a>
+                        </li>
+                        <li id="nomard" class="nomard">
+                            <a href="https://nomadcoders.co/" target="_blank"></a>
+                        </li>
+                        <li id="dnf" class="dnf">
+                            <a href="https://df.nexon.com/df/home" target="_blank"></a>
+                        </li>
+                        <li id="lol" class="lol">
+                            <a href="https://www.leagueoflegends.com/ko-kr/" target="_blank"></a>
+                        </li>
+                        <li id="ovch" class="ovch">
+                            <a href="https://playoverwatch.com/ko-kr/" target="_blank"></a>
+                        </li>
+                    </ul>
+                    <!-- 시계 -->
+                    <div id="clockbox" class="clockbox">
+                        <h4 id="clock" class="clock"></h4>
+                    </div>
+                </div>
+                <div id="boxes" class="boxes">
+                    <div id="box2" class="box2">
+                        <!-- 명언 -->
+                        <div id="quote" class="quote">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="boxes2" class="boxes2">
+                        <div id="box3" class="box3">
+                            <!-- 날씨,위치 -->
+                            <div id="weather" class="weather">
+                                <span></span>
+                                <span></span>
+                                <img src="" class="weatherIcon">
+                            </div>
+                        </div>
+                        <div id="box4" class="box4">
+                            <!-- 투두리스트 -->
+                            <ul id="todo-list" class="todo-list">
+                            </ul>
+                            <form id="todo-form" class="todo-form">
+                                <input id="todo-formInput" class="todo-formInput" type="text" placeholder="Write to-do"
+                                    required autocomplete="off" maxlength="18">
+                            </form>
+                        </div>
+                        <div id="box5" class="box5">
+                            <!-- 음악 -->
+                            <div id="musicBox" class="musicBox">
+                                <div class="music-img">
+                                    <div class="music-lpdeco"></div>
+                                    <div class="music-dot"></div>
+                                    <img src="MUSIC/">
+                                </div>
+                                <audio control id="audio" class="" src="">
+                                </audio>
+                                <ul id="musicBtn" class="musicBtn">
+                                    <li id="before">
+                                        <span class="material-icons c1">fast_forward</span>
+                                    </li>
+                                    <li id="play">
+                                        <span class="material-icons c2">play_arrow</span>
+                                    </li>
+                                    <li id="next">
+                                        <span class="material-icons c3">fast_forward</span>
+                                    </li>
+                                </ul>
+                                <div id="musicInfo" class="musicInfo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="box6" class="box6">
+                    <span class="material-icons">power_settings_new</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 보드박스2 -->
+        <div class="boardBox2">
+            <div class="boardBox_btn2">
+                <!--보드박스2 버튼-->
+                <img id="closebtn2" src="IMG/close_black_24dp.svg">
+            </div>
+            <div id="board2" class="board2">
+                <div class="controls">
+                    <div class="controls_colors" id="jsColors">
+                        <div class="controls_color jsColor" style="background-color: #2c2c2c;"></div>
+                        <div class="controls_color jsColor" style="background-color: white;"></div>
+                        <div class="controls_color jsColor" style="background-color: #FF3B30;"></div>
+                        <div class="controls_color jsColor" style="background-color: #FF9500;"></div>
+                        <div class="controls_color jsColor" style="background-color: #FFCC00;"></div>
+                        <div class="controls_color jsColor" style="background-color: #4CD963;"></div>
+                        <div class="controls_color jsColor" style="background-color: #5AC8FA;"></div>
+                        <div class="controls_color jsColor" style="background-color: #0579FF;"></div>
+                        <div class="controls_range">
+                            <input type="range" id="jsRange" min="0.1" max="15.0" value="7.5" step="0.1">
+                        </div>
+                        <div class="controls_color jsColor" style="background-color: #5856D6;"></div>
+                    </div>
+                    <canvas id="jsCanvas" class="canvas"></canvas>
+                    <div class="controls_btns">
+                        <button id="jsMode">Fill</button>
+                        <button id="jsSave">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/login.js"></script>
+    <script src="JS/board.js"></script>
+    <script src="JS/board2.js"></script>
+    <script src="JS/clock.js"></script>
+    <script src="JS/RandomBg.js"></script>
+    <script src="JS/todo.js"></script>
+    <script src="JS/weather.js"></script>
+    <script src="JS/quotes.js"></script>
+    <script src="JS/music.js"></script>
+    <script src="JS/paint.js"></script>
+</body>
+
+</html>
